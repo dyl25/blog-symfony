@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Create article {% endblock %}
+
+{% block body %}
+<h2>Creation of an article</h2>
+
+{% for message in app.flashes('notice') %}
+<div>
+    {{ message }}
+</div>
+{% endfor %}
+
+{{ form(form) }}
+
+{% endblock %}
